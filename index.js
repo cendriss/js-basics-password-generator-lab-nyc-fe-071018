@@ -20,6 +20,9 @@ window.addEventListener("load", () => {
       newPassword += lowerCaseCharacters
       [Math.floor(Math.random() * lowerCaseCharacters.length)
       ]
+      newPassword += lowerCaseCharacters
+      [Math.floor(Math.random() * lowerCaseCharacters.length)
+      ]
       console.log(newPassword)
       
     }
