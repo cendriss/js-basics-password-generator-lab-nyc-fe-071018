@@ -1,37 +1,43 @@
 window.addEventListener("load", () => {
   //start your code here
-  let outputResult = document.querySelector("output")
-  let lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz".split('')
-  let upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('')
-  let numberCharacters = "0123456789".split('')
-  let specialCharacters = "!#$%&()*+,-./:;<=>?@[\\]^_{|}~".split('')
-
-  document.addEventListener('submit', (event) => {
-    // stay on the same page
-    event.preventDefault();
-    
-    let input = document.getElementById("passwordLength")
-    let passwordLength = input.value
+  let outputResult = document.querySelector("output");
+  let lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz".split('');
+  let upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
+  let numberCharacters = "0123456789".split('');
+  let specialCharacters = "!#$%&()*+,-./:;<=>?@[\\]^_{|}~".split('');
+}
+document.addEventListener('submit', (event) => {
+    event.preventDefault(); }
+  
+let input = document.getElementById("passwordLength")
+    let passwordLength = input.value;
     if (passwordLength < 4) {
-      passwordLength = 4
+      passwordLength = 4;
     }
-    let newPassword = ""
+    let newPassword = "";
     for (let i = 0; i < passwordLength; i++) { 
       newPassword += lowerCaseCharacters
       [Math.floor(Math.random() * lowerCaseCharacters.length)
-      ]
+      ] }
+      if (i < passwordLength) {
+      i++;  
       newPassword += upperCaseCharactersCaseCharacters
       [Math.floor(Math.random() * upperCaseCharacters.length)
-      ]
+      ];}
+       if (i < passwordLength) {
+      i++;
       newPassword += numberCharacters
       [Math.floor(Math.random() * numberCharacters.length)
-      ]
+      ] ; }
+       if (i < passwordLength) {
+      i++;
       newPassword += specialCharacters
       [Math.floor(Math.random() * specialCharacters.length)
-      ]
-      console.log(newPassword)
-      if (newPassword.length === passwordLength) {
-        break;
-    }
+      ];
+      i++
+    
+     outputResult.innerHTML = newPassword
+        
+       }
   })
   
