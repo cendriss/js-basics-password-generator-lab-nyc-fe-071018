@@ -30,7 +30,8 @@ window.addEventListener("load", () => {
       [Math.floor(Math.random() * specialCharacters.length)
       ]
       console.log(newPassword)
-      
+      if (newPassword.length === passwordLength) {
+        break;
     }
   })
   
