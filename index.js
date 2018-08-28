@@ -16,8 +16,11 @@ window.addEventListener("load", () => {
       passwordLength = 4
     }
     let newPassword = ""
-    for (let i = 0; i < passwordLength; i++;) {
-      lowerCaseCharacters[]
+    for (let i = 0; i < passwordLength; i++;) { 
+      newPassword += lowerCaseCharacters
+      [Math.floor(Math.random() * lowerCaseCharacters.length)
+      ]
+      console.log(newPassword)
       
     }
   })
